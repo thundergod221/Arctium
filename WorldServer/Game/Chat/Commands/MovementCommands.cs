@@ -55,7 +55,7 @@ namespace WorldServer.Game.Chat.Commands
             {
                 var speed = CommandParser.Read<float>(args, 1);
 
-                if (speed <= 50 && speed > 0)
+                if (speed <= float.MaxValue && speed > 0)
                 {
                     MoveHandler.HandleMoveSetWalkSpeed(ref session, speed);
                     ChatHandler.SendMessageByType(ref session, 0, 0, "Walk speed set to " + speed + "!");
@@ -79,7 +79,7 @@ namespace WorldServer.Game.Chat.Commands
             else
             {
                 var speed = CommandParser.Read<float>(args, 1);
-                if (speed <= 50 && speed > 0)
+                if (speed <= float.MaxValue && speed > 0)
                 {
                     MoveHandler.HandleMoveSetRunSpeed(ref session, speed);
                     ChatHandler.SendMessageByType(ref session, 0, 0, "Run speed set to " + speed + "!");
@@ -103,7 +103,7 @@ namespace WorldServer.Game.Chat.Commands
             else
             {
                 var speed = CommandParser.Read<float>(args, 1);
-                if (speed <= 50 && speed > 0)
+                if (speed <= float.MaxValue && speed > 0)
                 {
                     MoveHandler.HandleMoveSetSwimSpeed(ref session, speed);
                     ChatHandler.SendMessageByType(ref session, 0, 0, "Swim speed set to " + speed + "!");
@@ -128,7 +128,7 @@ namespace WorldServer.Game.Chat.Commands
             {
                 var speed = CommandParser.Read<float>(args, 1);
 
-                if (speed <= 50 && speed > 0)
+                if (speed <= float.MaxValue && speed > 0)
                 {
                     MoveHandler.HandleMoveSetFlightSpeed(ref session, speed);
                     ChatHandler.SendMessageByType(ref session, 0, 0, "Flight speed set to " + speed + "!");
